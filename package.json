@@ -2,7 +2,7 @@
   "name": "galxe-project-filter",
   "version": "1.0.0",
   "description": "",
-  "main": "galxe-project-detail-filter.js",
+  "main": "galxe-project-filter.js",
   "scripts": {
     "get-all-project": "node ./galxe-project-filter.js",
     "filter-project": "node ./galxe-project-detail-filter.js",

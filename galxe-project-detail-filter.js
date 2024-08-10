@@ -4,7 +4,7 @@ var xlsx = require('node-xlsx').default;
 const utils = require('./utils');
 const axios = require('axios');
 
-const galxeList = xlsx.parse(`${__dirname}/galxe 项目列表20240809-18:34.xlsx`);
+const galxeList = xlsx.parse(`${__dirname}/dist/galxe 项目列表20240809-18:34.xlsx`);
 
 const arr = galxeList[0].data.slice(1);
 
@@ -49,7 +49,7 @@ async function fetchAndCheck() {
       if (htmlContent.includes(targetString1) || htmlContent.includes(targetString2)) {
         includeList.push(data)
         console.log(`${colors.BgGreen}%s${colors.Reset}`, `${index}__字符串存在于 ${url} 中`);
-        fs.writeFileSync('临时筛选出的项目列表.json', JSON.stringify(includeList, null, 2), 'utf-8');
+        fs.writeFileSync('./dist/临时筛选出的项目列表.json', JSON.stringify(includeList, null, 2), 'utf-8');
       } else {
         console.log(`${index}__字符串不存在于 ${url} 中`);
       }

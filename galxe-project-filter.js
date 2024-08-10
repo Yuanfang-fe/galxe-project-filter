@@ -128,7 +128,7 @@ fetchCampaigns().then(allCampaigns => {
   var buffer = xlsx.build([{ name: 'galxe 项目列表', data: [['项目名', '项目地址', '参与人数'], ...processedCampaigns] }]);
 
   let formattedDateTime = utils.getCurrentDateTimeFormatted();
-  const pathDir = `./galxe 项目列表${formattedDateTime}.xlsx`
+  const pathDir = `./dist/galxe 项目列表${formattedDateTime}.xlsx`
   var filePath = path.join(__dirname, pathDir); // 存储路劲和文件名
   fs.writeFileSync(filePath, buffer, { 'flag': 'w' });
   console.log(`文件已经生成至:${path.resolve(pathDir)}`)
