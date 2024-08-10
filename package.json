@@ -1,0 +1,17 @@
+{
+  "name": "galxe-project-filter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "galxe-project-detail-filter.js",
+  "scripts": {
+    "get-all-project": "node ./galxe-project-filter.js",
+    "filter-project": "node ./galxe-project-detail-filter.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.3",
+    "node-xlsx": "^0.24.0"
+  }
+}
